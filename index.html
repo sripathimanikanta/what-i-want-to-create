@@ -1,44 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 Projects</title>
+    <style>
+        body{
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .heading{
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .column {
+            background: #e0e0e0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sticky-note {
+            background: #fff59d;
+            /* Classic Post-it Yellow */
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            transform: rotate(-1deg);
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .sticky-note:nth-child(even) {
+            transform: rotate(1.5deg);
+            background: #cfd8dc;
+            /* Sleek Grey for contrast */
+        }
+
+        .sticky-note:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+        }
+
+        .sticky-note h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 5px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .note-link {
+            display: block;
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .note-link:hover {
+            background-color: #333;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .status-created {
+            color: #2e7d32;
+        }
+
+        .status-progress {
+            color: #f57c00;
+        }
+
+        .status-todo {
+            color: #c62828;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Create Website/Apps in 2026</h1>
-<h2>Websites</h2>
-<h3>Created</h3>
-<ol>
-    <li>Question Everything Mani</li>
-    <li>Portfolio V1</li>
-</ol>
+    <div class="heading">2026 Projects <i>by Manik Bhasha</i></div>
+    <div class="container">
+    <div class="board">
+        <div class="column">
+            <h2>✅ Finished</h2>
+            <div class="sticky-note">
+                <h3>Question Everything</h3>
+                <p>Home for Maths, Physics and Computer Science Students.</p>
+                <a href="https://curioquesevery.web.app/" target="_blank" class="note-link">🚀 View Project</a>
+                <span class="tag status-created">WEBSITE</span>
+            </div>
+            <div class="sticky-note">
+                <h3>Its Mani's Blog</h3>
+                <p>My Journal Place</p>
+                <span class="tag status-created">WEBSITE</span>
+                <a href="https://sripathimanikanta.github.io/itsmaniblog/" target="_blank" class="note-link">🚀 View Project</a>
+            </div>
+            <div class="sticky-note">
+                <h3>Portfolio V1</h3>
+                <p>My digital home- Version 1.</p>
+                <span class="tag status-created">WEBSITE</span>
+                <a href="https://sripathimanikanta.github.io/mani-portfolio-v1/" target="_blank" class="note-link">🚀 View Project</a>
+            </div>
+            <div class="sticky-note">
+                <h3>Portfolio V2</h3>
+                <p>My upgraded digital home - Version 2.</p>
+                <span class="tag status-created">WEBSITE</span>
+                <a href="https://sripathimanikanta.github.io/mani-portfolio-v2/" target="_blank" class="note-link">🚀 View Project</a>
+            </div>
+            <div class="sticky-note">
+                <h3>ManimWithMani</h3>
+                <p>STEM Visualizations.</p>
+                <span class="tag status-created">WEBSITE</span>
+                <a href="https://sripathimanikanta.github.io/ManimWithMani/" target="_blank" class="note-link">🚀 View Project</a>
+            </div>
+        </div>
 
-<h3>InProgress</h3>
-<ol>
-    <li>Portfolio V2</li>
-    <li>ManimWithMani</li>
-</ol>
+        <div class="column">
+            <h2>🚀 In Progress</h2>
+            <div class="sticky-note" style="background: #b3e5fc;">
+                <h3>NvoicZ (Expense)</h3>
+                <p>React Native / Expo app.</p>
+                <span class="tag status-progress">APP</span>
+            </div>
+            <div class="sticky-note" style="background: #b3e5fc;">
+                <h3>GITbitbybit</h3>
+                <p>Learning Git through visuals.</p>
+                <span class="tag status-progress">WEBSITE</span>
+            </div>
+            <div class="sticky-note" style="background: #b3e5fc;">
+                <h3>AI-AnotherIntelligence</h3>
+                <p>Learning AI through visuals.</p>
+                <span class="tag status-progress">WEBSITE</span>
+            </div>
+        </div>
 
-<h3>Didn't Even Start</h3>
-<ol>
-    <li>Kem-Mystry</li>
-    <li>GITbitbybit</li>
-    <li>AI-AnotherIntelligence</li>
-    <li>Portfolio V3</li>
-    <li>SpaceSpace</li>
-    <li>ModelItMani</li>
-</ol>
-<h2>Apps</h2>
-<ol>
-    <li>Expense</li>
-    <li>Foodbook</li>
-</ol>
-<h2>Source</h2>
-<ol>
-    <li>Manim</li>
-    <li>Digital</li>
-    <li>TinyGPU</li>
-</ol>
+        <div class="column">
+            <h2>💡 Future Ideas</h2>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>Kem-Mystry</h3>
+                <p>Chemistry through visuals.</p>
+                <span class="tag status-todo">WEBSITE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>Portfolio V3</h3>
+                <p>Home??.IDK</p>
+                <span class="tag status-todo">WEBSITE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>SpaceSpace</h3>
+                <p>Home for SPACE</p>
+                <span class="tag status-todo">WEBSITE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>TinyGPU</h3>
+                <p>Building from the gates up.</p>
+                <span class="tag status-todo">SOURCE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>Manim</h3>
+                <p>Contribute mani man.</p>
+                <span class="tag status-todo">SOURCE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>Digital</h3>
+                <p>Improve it.</p>
+                <span class="tag status-todo">SOURCE</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>Foodbook</h3>
+                <p>Social cooking app.</p>
+                <span class="tag status-todo">APP</span>
+            </div>
+            <div class="sticky-note" style="background: #ffccbc;">
+                <h3>ModelItMani</h3>
+                <p>Just My Modelling.Not what you think</p>
+                <span class="tag status-todo">WEBSITE</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
+
 </html>
